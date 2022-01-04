@@ -80,7 +80,7 @@ export default function buyGuide(props) {
         <Button onClick={() => setShowLayer("binance")}>Binance</Button>
         <Button onClick={() => setShowLayer("coinbase")}>Coinbase</Button>
         <Button onClick={() => setShowLayer("kucoin")}>KuCoin</Button>
-        <Button onClick={() => setShowLayer(false)}>Other</Button>
+        <Button onClick={() => setShowLayer("otherCex")}>Other</Button>
       </div>
     </div>
   );
@@ -99,6 +99,17 @@ export default function buyGuide(props) {
       </div>
     );
   };
+
+  const otherCexLayer = (
+      <div>
+        <div className="guideLabel caption">
+          Create an account with the exchanges previously listed, or figure out another way to get AVAX on your wallet
+        </div>
+        <div className="buttonGroup">
+          <button onClick={() => setShowLayer("traderJoe")}>Next</button>
+        </div>
+      </div>
+    )
 
   const traderJoeLayer = (
     <div>
@@ -149,6 +160,7 @@ export default function buyGuide(props) {
               ? cexLayer(showLayer)
               : null}
             {showLayer == "traderJoe" ? traderJoeLayer : null}
+            {showLayer == "otherCex" ? otherCexLayer : null}
           </div>
         </Modal.Body>
       </Modal>
