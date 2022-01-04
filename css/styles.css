@@ -1,0 +1,283 @@
+.loop {
+  width: 3100px;
+  margin-left: -1600px;
+  position: absolute;
+  margin-top: -1564px;
+  background-color: #ebf7f9;
+  z-index: -1;
+  mix-blend-mode: darken;
+  overflow: hidden;
+}
+
+.divider {
+  position: absolute;
+  background-color: white;
+  height: 100px;
+  width: 100vw;
+  box-shadow: 0 -5px 10px -2px #0000000e;
+  width: 100%;
+}
+
+.footer {
+    display: flex;
+  height: 50px;
+  width: 100%;
+  background: black;
+  padding: 0 50px;
+  align-items: center;
+  color: rgb(141, 141, 141);
+  font-size: 12px;
+}
+
+.container {
+  padding-left: 30px;
+}
+
+.title {
+  line-height: 1em;
+  font-size: min(110px, 10vw);
+  font-family: rubik;
+  margin-top: 90px;
+  font-weight: 500;
+  color: #000000;
+  background: linear-gradient(
+    90deg,
+    #5065da,
+    #556fff,
+    #c557ad,
+    #e65f9a,
+    #e66176
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.9;
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #000000ab;
+  font-weight: 500;
+}
+
+.bannerContainer {
+  height: 948px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bannerContainer:after {
+  overflow: hidden;
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: url(https://crosschaincapital.finance/img/holographic-1.632c468b.jpg)
+    50% / cover no-repeat;
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+.cccWaves {
+  height: 500px;
+}
+
+.statsContainer {
+  font-family: rubik;
+  margin-top: 275px;
+  width: 100%;
+  margin-left: -2vw;
+  display: flex;
+  justify-content: flex-start;
+  color: #000000b0;
+}
+
+@media (max-width: 800px) {
+  .statsContainer {
+    margin-top: 150px;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
+
+.statsItem {
+  text-align: center;
+  margin: 0 2vw;
+  background: #ffffff69;
+  padding: 20px;
+  border-radius: 20px;
+  min-width: 200px;
+  box-shadow: 5px 5px 5px #0000000a;
+}
+
+.statsLabel {
+  text-align: center;
+  font-size: 20px;
+}
+
+.waveContainer {
+  transform: rotate(-45deg);
+  width: 1000px;
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
+  margin-right: -500px;
+  margin-bottom: -100px;
+}
+
+.resources {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.mainContent {
+  margin-bottom: 200px;
+}
+
+@media (max-width: 800px) {
+  .resources {
+    flex-direction: column;
+  }
+}
+
+.card {
+  margin: 0 10px;
+  padding: 0 !important;
+  box-shadow: 0;
+  transition: 400ms;
+  min-height: 400px;
+  cursor: pointer;
+  bottom: 0;
+}
+
+.card:hover {
+  bottom: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.034);
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+.inputGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5%;
+}
+
+.inputItem {
+  position: relative;
+}
+
+.calcCurrentButton {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 7px;
+  margin-top: -33px;
+  color: #000000b2;
+}
+
+.calculatorContent {
+  font-family: rubik;
+  min-height: 500px;
+  color: #000000a1;
+}
+
+.calcStats {
+  margin-top: 10%;
+}
+
+.calcStatsGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion {
+  margin-top: 5%;
+}
+
+.guideContainer {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: rubik;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.guideLabel {
+  font-size: 75px;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.caption {
+  font-size: 20px;
+  text-align: center;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.buttonGroup > button {
+  margin: 0 20px;
+  font-size: 2.5em;
+  padding: 0.01em 0.5em;
+  min-width: 150px;
+  background-color: #343a40;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  border-color: #343a40;
+  box-shadow: 0 0.125em 0.25em rgba(52, 58, 64, 0.3);
+}
+
+.buttonGroup > button:hover {
+  color: var(--bs-white);
+  background-color: #2a2e33;
+  border-color: #2a2e33;
+}
+
+.carousel {
+  width: calc(15vw + 400px);
+  max-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10%;
+}
+
+.backButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-color: #343a40;
+  z-index: 2;
+}
+
+.backButton > img {
+  width: 5vw;
+  max-width: 40px;
+  min-width: 30px;
+  filter: contrast(0.5);
+}
