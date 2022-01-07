@@ -53,7 +53,7 @@ export default function banner (props) {
           </p>
           <p className="subtitle">
             Info, Questions, and Recaps and more
-            <br /> Fan-made from the community
+            <br /> Made to and from the Community
           </p>
           <div className="statsContainer">
             <div className="statsItem">

@@ -19,6 +19,10 @@ export default function Home() {
 
   return (
     <div className="cccContainer">
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Rubik');
+</style>
+
       <Banner price={price} volume={volume} />
       <div className="divider"></div>
       <div className="mainContent container">

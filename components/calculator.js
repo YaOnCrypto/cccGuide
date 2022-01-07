@@ -46,7 +46,7 @@ export default function banner(props) {
   const getPercentage = (compoundedAmount) => {
     const answer =
       (compoundedAmount / (inputPrice * inputAmount)) * 100;
-    return financial(answer);
+    return financial(answer-100);
   };
 
   return (
@@ -144,7 +144,7 @@ export default function banner(props) {
               <div className="calcStatsGroup">
                 <h5 className="statLabel">Potential Return Percentage</h5>
                 <p className="statNumber">
-                  {getPercentage(calculatedInterest)}%
+                  {getPercentage(calculatedInterest) }%
                 </p>
               </div>
               <div className="calcStatsGroup">
@@ -154,13 +154,13 @@ export default function banner(props) {
               <div className="calcStatsGroup">
                 <h5 className="statLabel">Potential # of mcNuggets</h5>
                 <p className="statNumber">
-                  {Math.floor(calculatedInterest / 0.4)}
+                  {Math.floor(calculatedInterest / 0.225)}
                 </p>
               </div>
             </div>
             <Accordion className="accordion">
   <Accordion.Item eventKey="0">
-    <Accordion.Header>Why this calculator is conservative</Accordion.Header>
+    <Accordion.Header>Why this calculator is very conservative</Accordion.Header>
     <Accordion.Body>
                 <p>Does not factor in</p>
                 <ul>

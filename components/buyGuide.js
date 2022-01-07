@@ -114,6 +114,8 @@ export default function buyGuide(props) {
   const traderJoeLayer = (
     <div>
       {imageCarousel(buyImages)}
+      {/* <p>1. Add .111 with the </p> */}
+
       <div className="guideLabel caption">
         Press the button below and follow the above instructions
       </div>
