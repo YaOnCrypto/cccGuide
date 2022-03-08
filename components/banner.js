@@ -36,7 +36,6 @@ export default function banner(props) {
               {/* <Nav.Link href="">Main Resources</Nav.Link> //make scroll down */}
               <Nav.Link href="https://medium.com/@crosschaincapital">Medium</Nav.Link>
               <Nav.Link href="https://discord.gg/wCx2yHPUMY">Discord</Nav.Link>
-              <Nav.Link href="https://t.me/crosschaincapital">Telegram</Nav.Link>
               <Nav.Link href="https://www.instagram.com/crosschaincapital/">Instagram</Nav.Link>
               <Nav.Link href="https://www.tiktok.com/@crosschaincapital">TikTok</Nav.Link>
             </Nav>
