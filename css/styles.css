@@ -1,3 +1,5 @@
+@font-face {font-family: "8-bit HUD"; src: url("//db.onlinewebfonts.com/t/afa327cd559b36de171501fc06a854f7.eot"); src: url("//db.onlinewebfonts.com/t/afa327cd559b36de171501fc06a854f7.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/afa327cd559b36de171501fc06a854f7.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/afa327cd559b36de171501fc06a854f7.woff") format("woff"), url("//db.onlinewebfonts.com/t/afa327cd559b36de171501fc06a854f7.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/afa327cd559b36de171501fc06a854f7.svg#8-bit HUD") format("svg"); }
+
 .loop {
   width: 3100px;
   margin-left: -1600px;
