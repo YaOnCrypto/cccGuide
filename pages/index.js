@@ -31,7 +31,7 @@ export default function Home() {
     <div className="cccContainer">
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik');
-        @import url('db.onlinewebfonts.com/c/afa327cd559b36de171501fc06a854f7?family=8-bit+HUD');
+        @import url('https://db.onlinewebfonts.com/c/afa327cd559b36de171501fc06a854f7?family=8-bit+HUD');
       </style>
 
       <Banner price={price} volume={volume} />
