@@ -2,25 +2,26 @@ import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import { Card, Navbar, Nav, Container } from "react-bootstrap";
 import { Parallax } from 'react-scroll-parallax';
+import ContentCards from "../components/contentCards.js";
 
 
-export default function banner (props) {
+export default function banner(props) {
 
-    const [price, setPrice] = useState();
-    const [volume, setVolume] = useState();
-    useEffect(() => {
-        setPrice(props.price)
-        setVolume(props.volume)
-    });
-  
-    const calcMc = (price, supply) =>{
-      const mc = price*supply
-      return mc.toLocaleString()
-    }
+  const [price, setPrice] = useState();
+  const [volume, setVolume] = useState();
+  useEffect(() => {
+    setPrice(props.price)
+    setVolume(props.volume)
+  });
 
-    return(
-        <div>
-        <div className="bannerContainer">
+  const calcMc = (price, supply) => {
+    const mc = price * supply
+    return mc.toLocaleString()
+  }
+
+  return (
+    <div>
+      <div className="bannerContainer">
         <Head>
           <title>CCC Community Guide</title>
         </Head>
@@ -42,34 +43,36 @@ export default function banner (props) {
           </Container>
         </Navbar>
 
-<div className="waveContainer">
-        <img className="cccWaves" src="/cccWaves.svg" />
+        <div className="waveContainer">
+
+          <img className="cccWaves" src="/cccWaves.svg" />
         </div>
 
         <div className="textContainer container">
-        <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
-          <p className="title">
-            CCC Community <br /> Guide
-          </p>
-          <p className="subtitle">
-            Info, Questions, and Recaps and more
-            <br /> Made to and from the Community
-          </p>
-          <div className="statsContainer">
-            <div className="statsItem">
-              <p className="statsNumber">${price}</p>
-              <p className="statsLabel">Price</p>
+
+          <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
+            <p className="title">
+              CCC Community <br /> Guide
+            </p>
+            <p className="subtitle">
+              Info, Questions, and Recaps and more
+              <br /> Made to and from the Community
+            </p>
+            <div className="statsContainer">
+              <div className="statsItem">
+                <p className="statsNumber">${price}</p>
+                <p className="statsLabel">Price</p>
+              </div>
+              <div className="statsItem">
+                <p className="statsNumber">${calcMc(price, 1500000000000)}</p>
+                <p className="statsLabel">Market Cap</p>
+              </div>
+              <div className="statsItem">
+                <p className="statsNumber">${volume ? volume.toLocaleString() : ''}</p>
+                <p className="statsLabel">Volume</p>
+              </div>
             </div>
-            <div className="statsItem">
-              <p className="statsNumber">${calcMc(price, 1500000000000)}</p>
-              <p className="statsLabel">Market Cap</p>
-            </div>
-            <div className="statsItem">
-              <p className="statsNumber">${volume ? volume.toLocaleString() : ''}</p>
-              <p className="statsLabel">Volume</p>
-            </div>
-          </div>
-        </Parallax>
+          </Parallax>
         </div>
 
         <video className="loop" loop autoPlay muted>
@@ -79,6 +82,6 @@ export default function banner (props) {
           ></source>
         </video>
       </div>
-</div>
-    )
+    </div>
+  )
 }

@@ -149,7 +149,7 @@
 }
 
 .card {
-  margin: 0 10px;
+  margin: 20px 10px;
   padding: 0 !important;
   box-shadow: 0;
   transition: 400ms;
@@ -280,4 +280,51 @@
   max-width: 40px;
   min-width: 30px;
   filter: contrast(0.5);
+}
+
+.hunt-title{
+  font-family: "8-bit HUD", sans-serif;
+  font-size: 1em!important;
+  line-height: 1.5em!important;
+}
+
+.hunt-font{
+  font-family: "8-bit HUD", sans-serif;
+  font-size: 0.75em!important;
+}
+
+.TusImage{    
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  clip: rect(0px,300px,168px,50px);}
+
+  table {
+    font-family: "8-bit HUD", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .huntCalcInfo{
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    margin-top: 35px;
+    width: 250px;
+  }
+
+.tusCurrent{
+  font-family: "8-bit HUD", sans-serif;
+font-size: 0.6em!important;
+  margin-top: -25px;
 }

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import { Card, Accordion, Modal, Form, Button } from "react-bootstrap";
+import { useRouter } from 'next/router'
 
 export default function banner(props) {
   const [price, setPrice] = useState(props.price);
@@ -11,6 +12,8 @@ export default function banner(props) {
   const [inputPrice, setInputPrice] = useState(price);
   const [inputPotentialPrice, setInputPotentialPrice] = useState(price);
   const [calculatedInterest, setCalculatedInterest] = useState(0);
+
+  const router = useRouter()
 
   useEffect(() => {
     setCalculatedInterest(calculateInterest(inputAmount));
@@ -52,8 +55,8 @@ export default function banner(props) {
   return (
     <div>
       <Modal
-        show={props.show}
-        onHide={() => props.setShow(false)}
+         show={router.query.modalId == "cccCalc"}
+         onHide={() => { router.push('/', undefined, { scroll: false }) }}
         dialogClassName="modal-90w"
         aria-labelledby="example-custom-modal-styling-title"
       >

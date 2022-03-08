@@ -1,9 +1,12 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import { Card, Modal, Carousel, Form, Button } from "react-bootstrap";
+import { useRouter } from 'next/router'
 
 export default function buyGuide(props) {
   const [showLayer, setShowLayer] = useState("first");
+
+  const router = useRouter()
 
   useEffect(() => {
     if (props.show) setShowLayer("first");
@@ -101,15 +104,16 @@ export default function buyGuide(props) {
   };
 
   const otherCexLayer = (
-      <div>
-        <div className="guideLabel caption">
-          Create an account with the exchanges previously listed, or figure out another way to get AVAX on your wallet
-        </div>
-        <div className="buttonGroup">
-          <button onClick={() => setShowLayer("traderJoe")}>Next</button>
-        </div>
+    <div>
+      <div className="guideLabel caption">
+        Create an account with a crypto exchange of your choice (steps should be similiar with any exchange) <br />
+        or figure out another way to get AVAX onto your wallet
       </div>
-    )
+      <div className="buttonGroup">
+        <button onClick={() => setShowLayer("traderJoe")}>Next</button>
+      </div>
+    </div>
+  )
 
   const traderJoeLayer = (
     <div>
@@ -123,14 +127,14 @@ export default function buyGuide(props) {
         <button
           onClick={() =>
             window.open(
-              "https://traderjoexyz.com/#/trade?outputCurrency=0x4939B3313E73ae8546b90e53E998E82274afDbDB",
+              "https://traderjoexyz.com/trade?outputCurrency=0x4939B3313E73ae8546b90e53E998E82274afDbDB",
               "_blank"
             )
           }
         >
           Buy $CCC (TraderJoe)
         </button>
-        <button onClick={() =>{props.setShow(false)}}>Done</button>
+        <button onClick={() => { props.setShow(false) }}>Done</button>
       </div>
     </div>
   );
@@ -139,8 +143,8 @@ export default function buyGuide(props) {
     <div>
       <p>{props.show}</p>
       <Modal
-        show={props.show}
-        onHide={() => props.setShow(false)}
+        show={router.query.modalId == "buyGuide"}
+        onHide={() => { router.push('/', undefined, { scroll: false }) }}
         dialogClassName="modal-90w"
         aria-labelledby="example-custom-modal-styling-title"
         fullscreen
@@ -151,14 +155,14 @@ export default function buyGuide(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        { showLayer != "first" ? <button onClick={ () => setShowLayer("first")} className="backButton"><img src="https://www.svgrepo.com/show/114939/go-back-arrow.svg"></img></button> : null}
+          {showLayer != "first" ? <button onClick={() => setShowLayer("first")} className="backButton"><img src="https://www.svgrepo.com/show/114939/go-back-arrow.svg"></img></button> : null}
           <div className="guideContainer">
             {showLayer == "first" ? firstLayer : null}
             {showLayer == "metamask" ? metamaskLayer : null}
             {showLayer == "cexQuestions" ? cexQuestionsLayer : null}
             {showLayer == "coinbase" ||
-            showLayer == "binance" ||
-            showLayer == "kucoin"
+              showLayer == "binance" ||
+              showLayer == "kucoin"
               ? cexLayer(showLayer)
               : null}
             {showLayer == "traderJoe" ? traderJoeLayer : null}
