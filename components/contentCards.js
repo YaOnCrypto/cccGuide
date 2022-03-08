@@ -107,7 +107,7 @@ export default function banner(props) {
           </Card.Body>
         </Card>
         <Card
-          onClick={() => window.open("https://discord.gg/wCx2yHPUMY", "_blank")}
+          onClick={() => window.open("https://crosschaincapital.finance/investments", "_blank")}
           style={{ width: "18rem" }}
         >
           <Card.Img
@@ -125,7 +125,7 @@ export default function banner(props) {
           </Card.Body>
         </Card>
         <Card
-          onClick={() => window.open("https://discord.gg/wCx2yHPUMY", "_blank")}
+          onClick={() => window.open("https://notes.crosschaincapital.finance/cross-chain-capital/what-is-cross-chain-capital", "_blank")}
           style={{ width: "18rem" }}
         >
           <Card.Img
