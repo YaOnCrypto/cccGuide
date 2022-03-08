@@ -118,7 +118,7 @@ export default function banner(props) {
             <div style={{ height: "175px" }}></div>
 
             <img className="TusImage" src="https://assets.coingecko.com/coins/images/20012/large/img-tus.png?1636378482" />
-            <p className="huntCalcInfo">To aproximate TUS yield per pool, check these win/lose <a href="https://docs.crabada.com/whitepaper/play-to-earn/scenerios">scenarios</a>.
+            <p className="huntCalcInfo">TUS yield per pool can vary drastically, check these win/lose <a href="https://docs.crabada.com/whitepaper/play-to-earn/scenerios">scenarios</a>.
               With 5 teams mining, the minimum amount possible is <i>2710.97</i> (factoring in the 15% performance fee) </p>
           </div>
 
