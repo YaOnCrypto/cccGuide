@@ -33,6 +33,7 @@ export default function Home() {
         @import url('https://fonts.googleapis.com/css2?family=Rubik');
         @import url('https://db.onlinewebfonts.com/c/afa327cd559b36de171501fc06a854f7?family=8-bit+HUD');
       </style>
+      <link href='https://db.onlinewebfonts.com/c/afa327cd559b36de171501fc06a854f7?family=8-bit+HUD' rel='stylesheet' type='text/css'></link>
 
       <Banner price={price} volume={volume} />
       <div className="divider"></div>
